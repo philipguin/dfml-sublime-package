@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>txt</string>
+		<string>dfml</string>
+	</array>
+	<key>name</key>
+	<string>DFML-old</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>comment</key>
+			<string>Header</string>
+			<key>match</key>
+			<string>^[ 	
+
+]*[-_a-zA-Z]+</string>
+			<key>name</key>
+			<string>entity.other.inherited-class</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>\[</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>bracket</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>\]</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>bracket</string>
+				</dict>
+			</dict>
+			<key>name</key>
+			<string>token.dfml</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>comment</key>
+					<string>Token type</string>
+					<key>match</key>
+					<string>(?&lt;!:)[ 	]*[^:\[\]]+</string>
+					<key>name</key>
+					<string>entity.name.tag</string>
+				</dict>
+				<dict>
+					<key>comment</key>
+					<string>Token identifier</string>
+					<key>match</key>
+					<string>[^:\[\]]+</string>
+					<key>name</key>
+					<string>entity.other.attribute-name</string>
+				</dict>
+				<dict>
+					<key>comment</key>
+					<string>Inner-token seperator</string>
+					<key>match</key>
+					<string>:</string>
+					<key>name</key>
+					<string>constant.language</string>
+				</dict>
+				<dict>
+					<key>comment</key>
+					<string>Invalid brackets</string>
+					<key>match</key>
+					<string>\[|\]</string>
+					<key>name</key>
+					<string>invalid</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Invalid brackets</string>
+			<key>match</key>
+			<string>\[|\]</string>
+			<key>name</key>
+			<string>invalid</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Everything else is comment</string>
+			<key>match</key>
+			<string>[^\[\]]+</string>
+			<key>name</key>
+			<string>comment</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>text.dfml</string>
+	<key>uuid</key>
+	<string>52bf0a1c-1a6e-4e78-b2d1-16416d722dae</string>
+</dict>
+</plist>

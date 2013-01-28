@@ -1,0 +1,47 @@
+{ "name": "DFML-old",
+  "scopeName": "text.dfml",
+  "fileTypes": ["txt","dfml"],
+  "patterns": [
+  		{ "match": "^[ \t\n\r]*[-_a-zA-Z]+",
+          "name": "entity.other.inherited-class",
+          "comment": "Header"
+        },
+        { "name": "token.dfml",
+		  "begin": "\\[",
+		  "beginCaptures": {
+		    "0": { "name": "bracket" }
+		  },
+		  "end": "\\]",
+		  "endCaptures": {
+		    "0": { "name": "bracket" }
+		  },
+		  "patterns": [
+	        { "match": "(?<!:)[ \t]*[^:\\[\\]]+",
+	          "name": "entity.name.tag",
+	          "comment": "Token type"
+	        },
+	        { "match": "[^:\\[\\]]+",
+	          "name": "entity.other.attribute-name",
+	          "comment": "Token identifier"
+	        },
+	        { "match": ":",
+	          "name": "constant.language",
+	          "comment": "Inner-token seperator"
+	        },
+	  		{ "match": "\\[|\\]",
+	          "name": "invalid",
+	          "comment": "Invalid brackets"
+	        }
+		  ]
+		},
+  		{ "match": "\\[|\\]",
+          "name": "invalid",
+          "comment": "Invalid brackets"
+        },
+  		{ "match": "[^\\[\\]]+",
+          "name": "comment",
+          "comment": "Everything else is comment"
+        }
+  ],
+  "uuid": "52bf0a1c-1a6e-4e78-b2d1-16416d722dae"
+}
