@@ -1,4 +1,4 @@
-{ "name": "DFML-old",
+{ "name": "DFML",
   "scopeName": "text.dfml",
   "fileTypes": ["txt","dfml"],
   "patterns": [
