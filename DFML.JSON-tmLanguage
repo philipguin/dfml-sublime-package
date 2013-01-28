@@ -2,10 +2,6 @@
   "scopeName": "text.dfml",
   "fileTypes": ["txt","dfml"],
   "patterns": [
-  		{ "match": "^[ \t\n\r]*[-_a-zA-Z]+",
-          "name": "entity.other.inherited-class",
-          "comment": "Header"
-        },
         { "name": "token.dfml",
 		  "begin": "\\[",
 		  "beginCaptures": {
